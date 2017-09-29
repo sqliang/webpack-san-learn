@@ -1,3 +1,7 @@
+/**
+ * @file 项目dev方式
+ */
+
 // check version of node and mpm
 require('./check-versions')();
 

@@ -1,3 +1,6 @@
+/**
+ * @file 检测node和npm的版本是否符合package.json里的配置
+ */
 var chalk = require('chalk');
 var semver = require('semver');
 var packageConfig = require('../package.json');
@@ -11,7 +14,7 @@ var versionRequirements = [
     {
         name: 'node',
         currentVersion: semver.clean(process.version),
-        versionRequirement: packageConfig.engins.node
+        versionRequirement: packageConfig.engines.node
     }
 ];
 

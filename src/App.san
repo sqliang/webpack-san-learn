@@ -1,0 +1,8 @@
+<template>
+<div>
+	<header>
+		<span>nihao</span>
+	</header>
+	<div id="content"></div>
+</div>
+</template>

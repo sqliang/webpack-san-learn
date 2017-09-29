@@ -21,8 +21,11 @@ module.exports = {
         bundleAnalyzerReport: process.env.npm_config_report
     },
     dev: {
+        // env 环境
         env: require('./dev.env'),
+        // 默认端口
         port: 8099,
+        // 是否自动打开浏览器
         autoOpenBrowser: true,
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',

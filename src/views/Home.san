@@ -1,8 +1,31 @@
 <template>
-<div>
-	<p>Home23</p>
+<div class="home">
+	<p class="home__p">Home</p>
+	<span class="span">{{name}}</span>
 </div>
 </template>
 
 <script>
+export default {
+	compiled() {
+		console.log('app is compiled');
+	},
+	initData() {
+		return {
+			name: 'sqliang'
+		}
+	}
+}
 </script>
+
+<style>
+/*
+ * BEM(Block,Element,Modifier)
+*/
+.home {
+	width: 100%;
+}
+.home__p {
+	color: red;
+}
+</style>

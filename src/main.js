@@ -3,6 +3,7 @@ import App from './App.san';
 import routes from './routes';
 import {Router} from 'san-router';
 
+import './index.css';
 
 const app = new App();
 const router = new Router();

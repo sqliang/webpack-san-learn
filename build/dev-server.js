@@ -16,6 +16,8 @@ var path = require('path');
 var express = require('express');
 var webpack = require('webpack');
 var proxyMiddleware = require('http-proxy-middleware');
+var webpackDevMiddleware = require('webpack-dev-middleware');
+var webpackHotMiddleware = require('webpack-hot-middleware');
 var webpackConfig = require('./webpack.dev.conf');
 
 // default port where dev server listens for incoming traffic
@@ -30,7 +32,7 @@ var proxyTable = config.dev.proxyTable;
 var app = express();
 var compiler = webpack(webpackConfig);
 
-var devMiddleware = require('webpack-dev-middleware')(compiler, {
+var devMiddleware = webpackDevMiddleware(compiler, {
     publicPath: webpackConfig.output.publicPath,
     quiet: false,
     stats: {
@@ -38,7 +40,7 @@ var devMiddleware = require('webpack-dev-middleware')(compiler, {
     }
 });
 // hot
-var hotMiddleware = require('webpack-hot-middleware')(compiler, {
+var hotMiddleware = webpackHotMiddleware(compiler, {
     log: () => {
 
     },

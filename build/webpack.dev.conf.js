@@ -19,6 +19,7 @@ module.exports = merge(baseWebpackConfig, {
         rules: utils.styleLoaders({sourceMap: config.dev.cssSourceMap})
     },
     // cheap-module-eval-source-map is faster for development
+    // 追踪错误和警告在源代码中的原始位置
     devtool: '#cheap-module-eval-source-map',
     plugins: [
         new webpack.DefinePlugin({
